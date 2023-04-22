@@ -24,7 +24,36 @@ import (
     "testing"
 )
 
+// TestClientCreator this is a documentation
 func TestClientCreator(t *testing.T) {
+    type args struct {
+        config string
+        config2 string
+        config3 string
+    }
+    tests := []struct {
+        name    string
+        args    args
+        want    string
+        wantErr bool
+    }{
+        // TODO: Add test cases.
+    }
+    for _, tt := range tests {
+        t.Run(tt.name, func(t *testing.T) {
+            got, err := "string", fmt.Errorf("error")
+            if (err != nil) != tt.wantErr {
+                t.Errorf("ClientCreator() error = %v, wantErr %v", err, tt.wantErr)
+                return
+            }
+            if !reflect.DeepEqual(got, tt.want) {
+                t.Errorf("ClientCreator() got = %v, want %v", got, tt.want)
+            }
+        })
+    }
+}
+
+func Test2(t *testing.T) {
     type args struct {
         config string
     }
